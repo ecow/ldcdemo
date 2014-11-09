@@ -85,9 +85,9 @@ Point jour browser to `http://localhost:8080/demo/`. Have a look to html source.
 Please note that you can extend this approach to query any data in other billons of linked data sources
 (public or private) in just three steps:
 
-  1 add the required dataset to the abox list in your linkeddata.center endpoint;
-  2 start a learn job; 
-  3 create your domain specific api to allow your application to access data.
+ 1 add the required dataset to the abox list in your linkeddata.center endpoint;
+ 2 start a learn job; 
+ 3 create your domain specific api to allow your application to access data
 
 ##Support
 Where possible I will try and provide support for this project, you can get in touch with me via email [e.fagnoni at e-artspace.com]
