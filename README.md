@@ -78,7 +78,7 @@ will return:
 [ "American River, South Australia", "Amatenango de la Frontera", "Amatenango del Valle" ]
 ```
 
-##client code
+##The client side html code
 The client Html and javascript is contatined in pub/index.html file.
 
 ##Reuse this approach
