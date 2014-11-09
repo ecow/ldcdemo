@@ -7,44 +7,36 @@ populated knownedge base hosted by [LinkedData.Center](http://linkeddata.center/
 This project provides RESTful web services based on [BOTK](http://ontology.it/tools/botk) toolkit.
 
 ##Background
-[linkeddata.center](http://linkeddata.center/) allows you to create and host a knoledge base populated from (Linked (Open)) data,
-freely available on the web, from  private data or from any conbination of both source types.
+[linkeddata.center](http://linkeddata.center/) allows you to create and host a knoledge base populated from Linked (Open) data,
+ available on the web, from  private data or from any conbination of both.
 
 The knowledge base exposes a [sparql end-point](http://www.w3.org/TR/sparql11-query/) full compliant with the last [W3C semantic web standards](http://www.w3.org/standards/semanticweb/)
 
-Because SPARQL and Semantic Web technologies require some backgrond knowledge, I provided some easy-to-understand examples that solve a 
-very general and frequent problem: autocomplete an input field using from a specific dataset.
+Because SPARQL and Semantic Web technologies require some backgrond knowledge, I provided an easy-to-understand example that solves a 
+very general and frequent problem: autocomplete an input field selecting data from a large dataset.
 
-Ok boy, what's the problem? 
-The main problem is to populate and maintain the data set needed for the autocomplention, without any effort!
-
-Suppose that you just want to get a list of all countries in the world. 
-Using a standard approach you need create  some records in a relational db and create a SQL query.
-This could be quite easy if just need english names, but if you would like to get all country 
-names expressed in any language (english, italian, arab, chinese, etc) the db become hard to  manage.
-
-...and if you want to autocomplete a field from a list of all municipalities in the word using the preferred user language?
-
-Here is where Linked Open Data do the magic! You can use [Dbpedia](http://dbpedia.org) to access the full crown knowledge of all Wikipedia!
+Suppose that you just want use jQueryUi autocomplete feature allowing the user to select his/her city using the list of all municipalities in the world using his/her language.
+In this case, the big problem is to populate and maintain the data set needed by the autocomplete script.
+ 
+Here is where Linked Open Data do the magic: you can use [Dbpedia](http://dbpedia.org) to access the full knowledge contained in Wikipedia!
 
 Unfortunately dbpedia is a great public service that does non ensure any SLA, very often the services is down for maintenance and you can't know when this happens.
 This is not acceptable if you want to build a solid application.
 
 A reasonable solution is to copy the data you need from dbpedia to your own knowlege base system, so you can safely use it in your application. 
+
 This is where [linkeddata.center](http://linkeddata.center/) service plays its role. 
 It give you an easy way to populate and host your private
-knowledge base getting and update data from any public and private source (for instance dbpedia), 
+knowledge base getting and updating data from any public and private source (for instance dbpedia), 
 create data mashup, apply rules, data inferences and many other features.
 
-In this project I use the **demo** knowledge basethat is available at 
-http://hub1.linkeddatacenter/ekb/demo/sparql endpoint.
+In this project I use the **demo** knowledge base that is available at 
+https://hub1.linkeddata.center/ekb/demo/sparql endpoint.
 The *demo* knoledge base is populate starting form a very simple data set described in a 
 pulic [simple plain html file](http://demo.hub1.linkeddata.center/data/abox.html).
-
-The demo end point is accessible using "demo" as username and "demo" password. 
 For information about how to populate a knowledge base, please refer to LinkedData.Center site. 
 
-This project implements a simple proxy to the demo sparql end point 
+This project implements a simple proxy to the linkeddata.center demo end point 
 that you can call in any web front end using standard jQuery methods to realize a 
 simple field autocomplention.
 
@@ -63,21 +55,24 @@ If you like devop approach:
   - point your browser to http://localhosts:8080/api/index.php/test to call your first demo api.
   - to destroy your virtual host just type `vagrant destroy` in shell windows
 
-##Api Usage
+##The server side script
+[jQueryUi remote autocomplete] (http://jqueryui.com/autocomplete/#remote) requires a 
+server script file. 
+The script that search municipalities in wikipedia is provided in pub/cities/index.php. Here is the script usage:
+
 ```
- http://your_endpoint_path/cities?search=[&list=10][&lang=*]
+ http://your_endpoint_path/cities?term=[&list=10][&lang=*]
 ```
-search municipalities in wikipedia
 
 Mandatory parameters:
-  - **search**: filter for auto complention. Search is enabled if you provide at least two chars.  Default empty.
+  - **term**: filter for auto complention. Search is enabled if you provide at least two chars.  Default empty.
 
 Optional parameters:
 
   - **list**: maximum number of items returned. Default 10, max 100, min 1
   - **lang**: preferred language using the two chars international coding standard. Default en.
 
-Example:
+Example call:
 
 `http://localhost:8080/demo/cities?search=am&list=3&lang=en` 
 
