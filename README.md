@@ -4,19 +4,18 @@
 The objective of this project is to show how easy is to build an autocomplention systems based on a semantic search on a automatically 
 populated knownedge base hosted by [LinkedData.Center](http://linkeddata.center/) services.
 
-This project provides RESTful web services based on [BOTK](http://ontology.it/tools/botk) toolkit.
+The server side implementation is based on [BOTK](http://ontology.it/tools/botk) toolkit, the client part is based on [jQueryUI autocomplete](http://jqueryui.com/autocomplete/)
 
 ##Background
-[linkeddata.center](http://linkeddata.center/) allows you to create and host a knoledge base populated from Linked (Open) data,
- available on the web, from  private data or from any conbination of both.
+[linkeddata.center](http://linkeddata.center/) allows you to create and host a knoledge base populated from Linked (Open) data, from  private data or from any combination of both.
 
 The knowledge base exposes a [sparql end-point](http://www.w3.org/TR/sparql11-query/) full compliant with the last [W3C semantic web standards](http://www.w3.org/standards/semanticweb/)
 
 Because SPARQL and Semantic Web technologies require some backgrond knowledge, I provided an easy-to-understand example that solves a 
 very general and frequent problem: autocomplete an input field selecting data from a large dataset.
 
-Suppose that you just want use jQueryUi autocomplete feature allowing the user to select his/her city using the list of all municipalities in the world using his/her language.
-In this case, the big problem is to populate and maintain the data set needed by the autocomplete script.
+Suppose that you just want use jQueryUi autocomplete feature allowing the user to select his/her city from a list of all municipalities in the world using his/her preferred language.
+In this case, the big problem is to populate and maintain the big data set needed by the autocomplete script.
  
 Here is where Linked Open Data do the magic: you can use [Dbpedia](http://dbpedia.org) to access the full knowledge contained in Wikipedia!
 
@@ -25,7 +24,8 @@ This is not acceptable if you want to build a solid application.
 
 A reasonable solution is to copy the data you need from dbpedia to your own knowlege base system, so you can safely use it in your application. 
 
-This is where [linkeddata.center](http://linkeddata.center/) service plays its role. 
+This is where [linkeddata.center](http://linkeddata.center/) service plays its role.
+
 It give you an easy way to populate and host your private
 knowledge base getting and updating data from any public and private source (for instance dbpedia), 
 create data mashup, apply rules, data inferences and many other features.
@@ -33,12 +33,8 @@ create data mashup, apply rules, data inferences and many other features.
 In this project I use the **demo** knowledge base that is available at 
 https://hub1.linkeddata.center/ekb/demo/sparql endpoint.
 The *demo* knoledge base is populate starting form a very simple data set described in a 
-pulic [simple plain html file](http://demo.hub1.linkeddata.center/data/abox.html).
-For information about how to populate a knowledge base, please refer to LinkedData.Center site. 
-
-This project implements a simple proxy to the linkeddata.center demo end point 
-that you can call in any web front end using standard jQuery methods to realize a 
-simple field autocomplention.
+pulic [simple html file](http://demo.hub1.linkeddata.center/data/abox.html).
+For more information about how to populate a knowledge base, please refer to LinkedData.Center site. 
 
 ##Requirements and test
 All *pub* directory must be published in a web server that supports php 5 (with curl extension ).
@@ -47,12 +43,12 @@ Beside this, in order to run the code you need:
   - the [composer](https://getcomposer.org/) php dependency manager.
   - git and subversion to clone required componens
   
-If you like devop approach:
+If you like devop approach :
 
   - install [vagrant](https://docs.vagrantup.com/v2/installation/) and [virtual box](https://www.virtualbox.org/) on your workstation.
-  - clone this project and cwd in it
-  - open a shell window and put the command `vagrant up`. A new virtual machine with all needed tools will be ready and running in few minutes.
-  - point your browser to http://localhosts:8080/api/index.php/test to call your first demo api.
+  - clone this project in directory of your workstation and cwd in it
+  - open a shell and type the command `vagrant up`. A new virtual machine with all needed tools will be ready and running in few minutes.
+  - point your browser to http://localhosts:8080/demo to call your first demo api.
   - to destroy your virtual host just type `vagrant destroy` in shell windows
 
 ##The server side script
