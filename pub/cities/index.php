@@ -54,7 +54,7 @@ class Demo extends EndPoint
 						?s a <http://dbpedia.org/class/yago/Municipality108626283> ;
 						   <http://www.w3.org/2000/01/rdf-schema#label> ?label .
 					}
-					FILTER(LANGMATCHES(LANG(?label), '$lang') && STRSTARTS(LCASE(?label), '$term'))
+					FILTER(LANGMATCHES(LANG(?label), '$lang') && REGEX(?label, '^$term','i'))
 				} LIMIT $list
 			";
 			$solutions = $sparql->query($query);
