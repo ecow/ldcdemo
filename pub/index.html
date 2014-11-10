@@ -24,7 +24,7 @@
           return;
         }
  
-        $.getJSON( "http://localhost:8080/demo/cities?lang=en", request, function( data, status, xhr ) {
+        $.getJSON( "cities?lang=en", request, function( data, status, xhr ) {
           cache[ term ] = data;
           response( data );
         });
