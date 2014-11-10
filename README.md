@@ -1,22 +1,20 @@
 #ldcdemo project
 ----------------
 
-The objective of this project is to show how easy is to build an autocomplente system based on a search in a automatically 
-populated knownedge base hosted by [LinkedData.Center](http://linkeddata.center/).
+The objective of this project is to show how easy is to build an autocomplete form based on a knownedge base hosted by [LinkedData.Center](http://linkeddata.center/).
 
-The server side implementation is based on [BOTK](http://ontology.it/tools/botk) toolkit, the client part is based on [jQueryUI autocomplete](http://jqueryui.com/autocomplete/)
+The html/javascript part is based on [jQueryUI autocomplete](http://jqueryui.com/autocomplete/), the server script is based on [BOTK](http://ontology.it/tools/botk) toolkit.
 
 ##Background
 [linkeddata.center](http://linkeddata.center/) allows you to create and host a knoledge base populated from Linked (Open) data, from  private data or from any combination of both.
 
 The knowledge base exposes a [sparql end-point](http://www.w3.org/TR/sparql11-query/) full compliant with the last [W3C semantic web standards](http://www.w3.org/standards/semanticweb/)
 
-Because SPARQL and Semantic Web technologies require some backgrond knowledge, I provided a simple example that solves a 
+Because is not always easy to understend the power of SPARQL and Semantic Web technologies in day-by-day programming, I provided a simple example that solves a 
 very general and frequent problem: autocomplete an input field selecting data from a large dataset.
 
-Suppose that you want use jQueryUi autocomplete feature allowing the user to select one city from a list of all municipalities in the world, and suppose to want this list available
-in different language (ebglis, italian, russian, japanese, etc).
-The big problem is to populate and maintain the big data set needed by the autocomplete script.
+Suppose that you want use jQueryUi autocomplete feature allowing the user to select one city from a list of all municipalities in the world, and suppose that you want this list available
+in different languages. You got a big problem: to populate and maintain the big data set needed by the autocomplete script.
  
 Here is where the Semantic Web do the magic: you can use [Dbpedia](http://dbpedia.org) to access the full knowledge contained in Wikipedia!
 
@@ -28,8 +26,8 @@ A reasonable solution is to copy the data you need from dbpedia to your own know
 This is where [linkeddata.center](http://linkeddata.center/) service plays its role.
 
 It gives you an easy way to populate and host your private
-knowledge base getting and updating data from any public and private source (for instance dbpedia), 
-create data mashup, apply rules, data inferences and many other features.
+RDF knowledge base getting and updating data from any public and private source (dbpedia in this case). 
+You can create data mashup, apply rules, data inferences and many other features.
 
 In this project I use the **demo** knowledge base that is available at 
 https://hub1.linkeddata.center/ekb/demo/sparql endpoint.
