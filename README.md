@@ -1,16 +1,13 @@
 #ldcdemo project
 ----------------
-
-The objective of this project is to show how easy is to build an autocomplete form based on a knownedge base hosted by [LinkedData.Center](http://linkeddata.center/).
+The objective of this project is to show how easy is to build an autocomplete html form based on data extracted from wikipedia.  
 
 The html/javascript part is based on [jQueryUI autocomplete](http://jqueryui.com/autocomplete/), the server script is based on [BOTK](http://ontology.it/tools/botk) toolkit.
+Wikipedia knowledge is distilled by [Dbpedia](http://dbpedia.org) and hosted by [LinkedData.Center](http://linkeddata.center/).
 
 ##Background
-[linkeddata.center](http://linkeddata.center/) allows you to create and host a knoledge base populated from Linked (Open) data, from  private data or from any combination of both.
 
-The knowledge base exposes a [sparql end-point](http://www.w3.org/TR/sparql11-query/) full compliant with the last [W3C semantic web standards](http://www.w3.org/standards/semanticweb/)
-
-Because is not always easy to understend the power of SPARQL and Semantic Web technologies in day-by-day programming, I provided a simple example that solves a 
+Because is not always easy to understend the power of SPARQL and of Semantic Web technologies in day-by-day programming, I provided a simple example that solves a 
 very general and frequent problem: autocomplete an input field selecting data from a large dataset.
 
 Suppose that you want use jQueryUi autocomplete feature allowing the user to select one city from a list of all municipalities in the world, and suppose that you want this list available
@@ -24,9 +21,8 @@ This is not acceptable if you want to build a solid application.
 A reasonable solution is to copy the data you need from dbpedia to your own knowlege base system, so you can safely use it in your application. 
 
 This is where [linkeddata.center](http://linkeddata.center/) service plays its role.
-
-It gives you an easy way to populate and host your private
-RDF knowledge base getting and updating data from any public and private source (dbpedia in this case). 
+It allows you to create and host a knoledge base populated from Linked (Open) data, from  private data or from any combination of both (in this case just dbpedia).
+The knowledge base exposes a [sparql end-point](http://www.w3.org/TR/sparql11-query/) full compliant with the last [W3C semantic web standards](http://www.w3.org/standards/semanticweb/).
 You can create data mashup, apply rules, data inferences and many other features.
 
 In this project I use the **demo** knowledge base that is available at 
