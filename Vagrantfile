@@ -2,8 +2,7 @@
 # vi: set ft=ruby :
 
 # elinux/v01642 is 
-VBOX         = "elinux/v01642" #just a plain ubuntu 14.04 server, fill free to change with ypur preferred distribution.
-VBOX_URL     = "http://e-artspace.com/eCloud/images/elinux/v0164.box"
+VBOX         = "ubuntu/trusty64" #just a plain ubuntu 14.04 server, fill free to change with ypur preferred distribution.
 VBOX_MEMORY  = 640
 LOCALPORT	 = 8080			   # change this if already in use
 
@@ -34,7 +33,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.provider :virtualbox do |vb|
         config.vm.box = VBOX
-        config.vm.box_url = VBOX_URL
         vb.memory = VBOX_MEMORY
         config.vm.network "forwarded_port", guest: 80, host: LOCALPORT
     end
