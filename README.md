@@ -31,20 +31,20 @@ The *demo* knoledge base is populated starting form a very simple data set descr
 [simple html file](http://demo.hub1.linkeddata.center/data/abox.html).
 For more information about how to populate a knowledge base, please refer to LinkedData.Center site. 
 
-##Requirements and test
-All *pub* directory must be published in a web server that supports php 5 (with curl extension ).
-Beside this, in order to run the code you need:
-
-  - the [composer](https://getcomposer.org/) php dependency manager.
-  - git and subversion to clone required componens
-  
-If you like devop approach :
+## Test in a local environment using Vagrant (suggested)
 
   - install [vagrant](https://docs.vagrantup.com/v2/installation/) and [virtual box](https://www.virtualbox.org/) on your workstation.
   - clone this project in directory of your workstation and cwd in it
   - open a shell and type the command `vagrant up`. A new virtual machine with all needed tools will be ready and running in few minutes.
   - point your browser to http://localhosts:8080/demo to call your first demo api.
   - to destroy your virtual host just type `vagrant destroy` in shell windows
+ 
+## Remote API installation
+
+  - Install [composer](https://getcomposer.org/) php dependency manager. Create all needed dependency changing working directory on project home and giving the command `composer install`
+  - Publish the project in a web server that supports php 5 (with curl extension ).
+
+The provision script contained in Vagrant file will give an idea of a complete api installation on a ubuntu 14.04 box.
 
 ##The server side script
 [jQueryUi remote autocomplete] (http://jqueryui.com/autocomplete#remote) requires a 
