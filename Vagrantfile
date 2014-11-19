@@ -16,11 +16,11 @@ ln -s /vagrant/pub/ /var/www/html/demo
 
 ## Uncomment following lines if you want to develop library code: 
 ## install composer and enable display_errors
-#sed -i 's/^display_errors = Off/display_errors = On/g' /etc/php5/apache2/php.ini
-#apt-get -y install git subversion
-#curl -sS https://getcomposer.org/installer | php
-#mv composer.phar /usr/local/bin/composer
-#cd /vagrant; composer update
+sed -i 's/^display_errors = Off/display_errors = On/g' /etc/php5/apache2/php.ini
+apt-get -y install git subversion
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+cd /vagrant; composer install
 
 echo '--- Your code is in /vagrant directory'
 echo '--- Use "vagrant ssh" to login to virtual host'
