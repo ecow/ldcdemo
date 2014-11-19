@@ -1,0 +1,13 @@
+; This is a simple test ini file
+var1 ="this is a string"
+var2 = 2
+var3[] = "array-1"
+var3[] = "array-2"
+
+
+;
+; Sections ignored
+;
+[Section]
+var4 = 4
+var5= false 

@@ -38,11 +38,12 @@ For more information about how to populate a knowledge base, please refer to Lin
   - open a shell and type the command `vagrant up`. A new virtual machine with all needed tools will be ready and running in few minutes.
   - point your browser to http://localhosts:8080/demo to call your first demo api.
   - to destroy your virtual host just type `vagrant destroy` in shell windows
- 
-## Remote API installation
 
-  - Install [composer](https://getcomposer.org/) php dependency manager. Create all needed dependency changing working directory on project home and giving the command `composer install`
-  - Publish the project in a web server that supports php 5 (with curl extension ).
+You should get locally the same results available in [E-Artspace demo site](http://demo.e-artspace.com/ldc/pub/).
+ 
+## Install
+
+   - Publish the project in a web server that supports php 5 (with curl extension ).
 
 The provision script contained in Vagrant file will give an idea of a complete api installation on a ubuntu 14.04 box.
 
@@ -74,6 +75,8 @@ will return:
 ```json
 [ "American River, South Australia", "Amatenango de la Frontera", "Amatenango del Valle" ]
 ```
+
+[Try in demo site](http://demo.e-artspace.com/ldc/pub/cities?term=am&list=3&lang=en).
 
 ##The client side html code
 The client Html and javascript is contatined in pub/index.html file.

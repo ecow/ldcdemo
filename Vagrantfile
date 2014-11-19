@@ -34,7 +34,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provider :virtualbox do |vb|
         config.vm.box = VBOX
         vb.memory = VBOX_MEMORY
-		vb.gui = true
+        ## Try uncomment next line if you experience problems booting virtual box
+		#vb.gui = true
         config.vm.network "forwarded_port", guest: 80, host: LOCALPORT
     end
 

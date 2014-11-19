@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Sparql Samples documentation</title>
+    <link rel="stylesheet" type="text/css" href="http://ontology.it/tools/bofw/v4/css/doc.css">
+  </head>
+  <body>
+    <header>
+      <div class="jumbotron">
+        <h1>BOTK Sparql package samples doc</h1>
+      </div>
+      <section>
+        <h2>Running samples</h2>
+        To execute samples in this dir: <br>
+        <ol>
+          <li style="box-sizing: border-box;"> download and install Composer
+            with required dependencies:<span class="Apple-converted-space">&nbsp;</span>
+            <br>
+            <code> curl -s http://getcomposer.org/installer | php;</code><code>
+              php composer.phar install</code> </li>
+          <li> Configure a php enabled web server to publish <code> samples</code>
+            directory and point browser to it. This file should be shown. </li>
+          <li> Click links to run examples </li>
+          <li> See sources </li>
+          <li> Play with http headers (i.e. Accepts) and http methods using an
+            interactive REST client compatible with your browser (<a href="http://restforchrome.blogspot.fr/">here
+              an example for chrome</a>). </li>
+        </ol>
+        <h2>rawquery.php</h2>
+        This script returns turtle data from a query to dbpedia without parsing
+        resuts. <a href="rawquery.php">Try it</a>. <br>
+        <h2>query.php</h2>
+        Like rawquery.php but parsing resuts. <a href="query.php">Try it</a>. <br>
+        <h2>iquery.php</h2>
+        This examples shows the usage of Guzzle Iterator applied to sparql
+        command. This scripts iterates on dbpedia resource slicing response in
+        payloads of about 1MB each. It download 10000 items from dbpedia and
+        prints some statistics. Please do not abuse of this script in order to
+        not waste dbpedia resources. <a href="iquery.php">Try it</a>. <br>
+        <h2>sparqAgent.php</h2>
+        This script realizes a simple Semantic Web Agent that acts as a proxy to
+        a generic remote SPARQL endpoint. It accepts as GET parameters an sparql
+        endpoint url, a urlencode sparql query an the username and password to
+        be used to access sparql endpoint. It makes the query to the remote
+        endpoint and provides back result managing content negotiation. It
+        provdes als hyperlinks to edit the query and to show alternate formats
+        for resuts.This script can be <a href="sparqlForm.php">drived by this
+          simple html form</a>. Note that this script is able to manage SARQL
+        entailment if endpoint supports it.<br>
+        <h2>easyRdfQuery.php</h2>
+        Same behavior as query.php but it is implemented using EasyRdf
+        interface. <a href="easyRdfQuery.php">Try it</a>. </section>
+    </header>
+  </body>
+</html>
