@@ -13,7 +13,7 @@ very general and frequent problem: autocomplete an input field selecting data fr
 Suppose that you want use jQueryUi autocomplete feature allowing the user to select one city from a list of all municipalities in the world, and suppose that you want this list available
 in different languages. You got a big problem: to populate and maintain the big data set needed by the autocomplete script.
  
-Here is where the Semantic Web do the magic: you can use [Dbpedia](http://dbpedia.org) to access the full knowledge contained in Wikipedia!
+Here is where the Semantic Web does the magic: you can use [Dbpedia](http://dbpedia.org) to access the full "Wisdom of the crowd" contained in Wikipedia!
 
 Unfortunately dbpedia is a great public service that does non ensure any SLA, very often the services is down for maintenance and you can't know when this happens.
 This is not acceptable if you want to build a solid application.
@@ -21,7 +21,7 @@ This is not acceptable if you want to build a solid application.
 A reasonable solution is to copy the data you need from dbpedia to your own knowlege base system, so you can safely use it in your application. 
 
 This is where [linkeddata.center](http://linkeddata.center/) service plays its role.
-It allows you to create and host a knoledge base populated from Linked (Open) data, from  private data or from any combination of both (in this case just dbpedia).
+It allows you to create and host a knoledge base populated from Linked Open data, from  private data or from any combination of both (in this case we use just just dbpedia).
 The knowledge base exposes a [sparql end-point](http://www.w3.org/TR/sparql11-query/) full compliant with the last [W3C semantic web standards](http://www.w3.org/standards/semanticweb/).
 You can create data mashup, apply rules, data inferences and many other features.
 
