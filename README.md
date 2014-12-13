@@ -25,6 +25,8 @@ It allows you to create and host a knoledge base populated from Linked Open data
 The knowledge base exposes a [sparql end-point](http://www.w3.org/TR/sparql11-query/) full compliant with the last [W3C semantic web standards](http://www.w3.org/standards/semanticweb/).
 You can create data mashup, apply rules, data inferences and many other features.
 
+After installing this project, you should be able to replicate the same [simple web page available in E-Artspace demo site](http://demo.e-artspace.com/ldc/pub/).
+
 In this project I use the **demo** knowledge base that is available at 
 https://hub1.linkeddata.center/ekb/demo/sparql endpoint.
 The *demo* knoledge base is populated starting form a very simple data set described in a 
