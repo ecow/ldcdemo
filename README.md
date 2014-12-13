@@ -13,7 +13,7 @@ very general and frequent problem: autocomplete an input field selecting data fr
 Suppose that you want use jQueryUi autocomplete feature allowing the user to select one city from a list of all municipalities in the world, and suppose that you want this list available
 in different languages. You got a big problem: to populate and maintain the big data set needed by the autocomplete script.
  
-Here is where the Semantic Web does the magic: you can use [Dbpedia](http://dbpedia.org) to access the full "Wisdom of the crowd" contained in Wikipedia!
+Here is where the Semantic Web does the magic: you can use [Dbpedia](http://dbpedia.org) to access the full "Wisdom of the crowd" contained in Wikipedia and use it to get a list of all municipalities in the word, translated in any language!
 
 Unfortunately dbpedia is a great public service that does non ensure any SLA, very often the services is down for maintenance and you can't know when this happens.
 This is not acceptable if you want to build a solid application.
