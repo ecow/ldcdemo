@@ -102,9 +102,18 @@ Where possible, I will try and provide support for this project, you can get in 
 Or feel free to open an issue and I'll do my best to help.
 
 ##Credits
-lcddemo makes use of a *lot* of awesome open source projects. I started out trying to list all of them but it was taking way too much time so check out
-[botk](http://ontology.it/tools/botk).
+I have to thank a *lot* of awesome open source projects that were suggested by [BOTK](http://ontology.it/tools/botk):
+
+ - BOTK Core and BOTK SPARQL packages by E-Artspace.
+ - Rest by Alexandre Gomes Gaigalas
+ - Mimeparse by Joe Gregorio
+ - Guzzle] by Michael Dowling
+ - EasyRDF by Nicholas J Humfrey
+ - Composer by Nils Adermann, Jordi Boggiano
+ 
+And, of course, PHP and JQuery community.
 
 ##License
 This project is licensed under the GPL v3, see here for the full license in LICENSE file.
+Find details and licenses of embedded software in the Vendor directory that will be created doring deploy process.
 
