@@ -1,9 +1,11 @@
 #ldcdemo project
 ----------------
-The objective of this project is to show how easy is to build an autocomplete html form based on data extracted from wikipedia.  
+The objective of this project is to build an autocomplete html form based on data extracted from wikipedia.  
+See [an on-line installation available in E-Artspace demo site](http://demo.e-artspace.com/ldc/pub/).
 
 The html/javascript part is based on [jQueryUI autocomplete](http://jqueryui.com/autocomplete/), the server script is based on [BOTK](http://ontology.it/tools/botk) toolkit.
 Wikipedia knowledge is distilled by [Dbpedia](http://dbpedia.org) and hosted by [LinkedData.Center](http://linkeddata.center/).
+
 
 ##Background
 
@@ -15,25 +17,27 @@ in different languages. You got a big problem: to populate and maintain the big 
  
 Here is where the Semantic Web does the magic: you can use [Dbpedia](http://dbpedia.org) to access the full "Wisdom of the crowd" contained in Wikipedia and use it to get a list of all municipalities in the word, translated in any language!
 
-Unfortunately dbpedia is a great public service that does non ensure any SLA, very often the services is down for maintenance and you can't know when this happens.
-This is not acceptable if you want to build a solid application.
+Unfortunately dbpedia is a great public service but it does non ensure any SLA, the performaces are unpredictable and very often the services is down for maintenance and you can't know when this happens.
+This is not acceptable if you want to build a solid application based directly on such service.
 
 A reasonable solution is to copy the data you need from dbpedia to your own knowlege base system, so you can safely use it in your application. 
 
 This is where [linkeddata.center](http://linkeddata.center/) service plays its role.
-It allows you to create and host a knoledge base populated from Linked Open data, from  private data or from any combination of both (in this case we use just just dbpedia).
-The knowledge base exposes a [sparql end-point](http://www.w3.org/TR/sparql11-query/) full compliant with the last [W3C semantic web standards](http://www.w3.org/standards/semanticweb/).
+It allows you to quicly create and host a knoledge base populated from Linked Open Data, from  private data or from any combination of both. In this project we use just dbpedia.
+LinkedData.Centers exposes a dedicated and password protected [sparql end-point](http://www.w3.org/TR/sparql11-query/) full compliant with the last [W3C semantic web standards](http://www.w3.org/standards/semanticweb/).
 You can create data mashup, apply rules, data inferences and many other features.
-
-After installing this project, you should be able to replicate the same [simple web page available in E-Artspace demo site](http://demo.e-artspace.com/ldc/pub/).
 
 In this project I use the **demo** knowledge base that is available at 
 https://hub1.linkeddata.center/ekb/demo/sparql endpoint.
+
+
 The *demo* knoledge base is populated starting form a very simple data set described in a 
 [simple html file](http://demo.hub1.linkeddata.center/data/abox.html).
 For more information about how to populate a knowledge base, please refer to LinkedData.Center site. 
 
 ## Test in a local environment using Vagrant (suggested)
+
+These instructions allow to install and test the project on your local workstation using some simple virtualization technologies:
 
   - install [vagrant](https://docs.vagrantup.com/v2/installation/) and [virtual box](https://www.virtualbox.org/) on your workstation.
   - clone this project in directory of your workstation and cwd in it
@@ -43,7 +47,7 @@ For more information about how to populate a knowledge base, please refer to Lin
 
 You should get locally the same results available in [E-Artspace demo site](http://demo.e-artspace.com/ldc/pub/).
  
-## Install
+## Install on your PHP web server
 
    - Publish the project in a web server that supports php 5 (with curl extension ).
 
