@@ -102,7 +102,7 @@ Where possible, I will try and provide support for this project, you can get in 
 Or feel free to open an issue and I'll do my best to help.
 
 ##Credits
-I have to thank a *lot* of awesome open source projects that were suggested by [BOTK](http://ontology.it/tools/botk):
+I have to thank a *lot* of awesome open source projects that were suggested by [BOTK](http://ontology.it/tools/botk) architecture:
 
  - BOTK Core and BOTK SPARQL packages by E-Artspace.
  - Rest by Alexandre Gomes Gaigalas
