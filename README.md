@@ -1,6 +1,6 @@
 #ldcdemo project
 ----------------
-The objective of this project is to build an autocomplete html form based on data extracted from wikipedia.  
+The objective of this project is to build a simple autocomplete html form based on data extracted from wikipedia.  
 See [an on-line installation available in E-Artspace demo site](http://demo.e-artspace.com/ldc/pub/).
 
 The html/javascript part is based on [jQueryUI autocomplete](http://jqueryui.com/autocomplete/), the server script is based on [BOTK](http://ontology.it/tools/botk) toolkit.
