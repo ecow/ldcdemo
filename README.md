@@ -17,7 +17,7 @@ in different languages. You got a big problem: to populate and maintain the big 
  
 Here is where the Semantic Web does the magic: you can use [Dbpedia](http://dbpedia.org) to access the full "Wisdom of the crowd" contained in Wikipedia and use it to get a list of all municipalities in the word, translated in any language!
 
-Unfortunately dbpedia is a great public service but it does non ensure any SLA, the performaces are unpredictable and very often the services is down for maintenance and you can't know when this happens.
+Unfortunately dbpedia is a great public service but it does non ensure any SLA, the performaces are unpredictable and very often the service is down for maintenance and you can't know when this happens.
 This is not acceptable if you want to build a solid application based directly on such service.
 
 A reasonable solution is to copy the data you need from dbpedia to your own knowlege base system, so you can safely use it in your application. 
@@ -37,7 +37,7 @@ For more information about how to populate a knowledge base, please refer to Lin
 
 ## Test in a local environment using Vagrant (suggested)
 
-These instructions allow to install and test the project on your local workstation using some simple virtualization technologies:
+These instructions allow you to install and test the project on your local workstation using some simple virtualization technologies:
 
   - install [vagrant](https://docs.vagrantup.com/v2/installation/) and [virtual box](https://www.virtualbox.org/) on your workstation.
   - clone this project in directory of your workstation and cwd in it
@@ -51,12 +51,12 @@ You should get locally the same results available in [E-Artspace demo site](http
 
    - Publish the project in a web server that supports php 5 (with curl extension ).
 
-The provision script contained in Vagrant file will give an idea of a complete api installation on a ubuntu 14.04 box.
+The provision script contained in the Vagrant file will give an idea of a complete api installation on a ubuntu 14.04 box.
 
 ##The server side script
 [jQueryUi remote autocomplete] (http://jqueryui.com/autocomplete#remote) requires a 
 server script file. 
-The script that search municipalities in wikipedia is provided in pub/cities/index.php file. Here is the script usage:
+The script source that searches municipalities in wikipedia is provided in pub/cities/index.php file. Here is the script usage:
 
 ```
  http://your_endpoint_path/cities?term=[&list=10][&lang=*]
@@ -85,7 +85,7 @@ will return:
 [Try in demo site](http://demo.e-artspace.com/ldc/pub/cities?term=am&list=3&lang=en).
 
 ##The client side html code
-The client Html and javascript is contatined in pub/index.html file.
+The Html source with all required javascript is contatined in pub/index.html file.
 
 ##Reuse this approach
 Please note that you can extend this approach to query any data in billons of linked data sources
