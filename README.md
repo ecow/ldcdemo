@@ -9,7 +9,7 @@ Wikipedia knowledge is distilled by [Dbpedia](http://dbpedia.org) and hosted by 
 
 ##Background
 
-Because is not always easy to understend the power of SPARQL and of Semantic Web technologies in day-by-day programming, I provided a simple example that solves a 
+Because is not always easy to understand the power of SPARQL and of Semantic Web technologies in day-by-day programming, I provided a simple example that solves a 
 very general and frequent problem: autocomplete an input field selecting data from a large dataset.
 
 Suppose that you want use jQueryUi autocomplete feature allowing the user to select one city from a list of all municipalities in the world, and suppose that you want this list available
