@@ -33,10 +33,10 @@ class Demo extends EndPoint
 																		
 			// Create a new sparql client:
 			$sparql = SparqlClient::factory (array (
-			  'endpoint_url' 	=> 'https://hub1.linkeddata.center/ekb/demo/sparql',
+			  'endpoint_url' 	=> 'https://hub1.linkeddata.center/demo/sparql',
 			  'request.options' => array(
 			      'auth' => array('demo', 'demo', 'Basic'),			// enable http basic autentication
-			      'verify' => false,					// disable ssl verify
+			      //'verify' => false,					// disable ssl verify
 			  )
 			));
 			
