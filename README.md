@@ -1,7 +1,7 @@
 WARNING
 =======
 
-The development of this projects continue to https://github.com/linkeddatacenter/autocomplete
+The development of this projects continue to https://github.com/ecow/katacoda-scenarios
 
 Update your links.
 
